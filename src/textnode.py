@@ -2,7 +2,7 @@ from enum import Enum
 from htmlnode import LeafNode,HTMLNode
 
 class TextType(Enum):
-    NORMAL = "normal"
+    TEXT = "normal"
     BOLD = "bold"
     ITALIC = "italic"
     CODE = "code"
