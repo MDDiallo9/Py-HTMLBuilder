@@ -18,7 +18,7 @@ def split_nodes_delimiter(old_nodes,delimiter,text_type):
     if end is not None:
         print(f"Delimiter found from index {first} to {end}")
     else:
-        print("Delimiter not found")
+        raise ValueError("closing tag not found, invalid Markdown")
         
     return new_nodes
         
