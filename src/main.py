@@ -1,7 +1,7 @@
 from textnode import *
 from htmlnode import HTMLNode,LeafNode,ParentNode
 
-test = TextNode("This is a text node", "bold", "https://www.boot.dev")
+test = TextNode("This is an image", TextType.LINK, "https://www.google.com")
 test2 = HTMLNode("h1","Title",None,{
     "href": "https://www.google.com",
     "target": "_blank",
@@ -16,6 +16,7 @@ node = ParentNode("p",[
         LeafNode("img", "image")
         ],)
         ],)
-print(test.__repr__())
-print(leaf.props_to_html())
-print(node.to_html())
+""" print(test.__repr__()) """
+print(leaf.to_html())
+""" print(node.to_html()) """
+print(test.text_node_to_html_node().to_html())
